@@ -26,7 +26,7 @@
 ### 1. 克隆项目
 
 ```bash
-git clone https://github.com/你的用户名/RAG-Agent.git
+git clone https://github.com/Oliver0190/Q-A-Agent.git
 cd RAG-Agent
 ```
 
@@ -71,5 +71,5 @@ python app.py
 ├── agent.py         # ReAct Agent 核心逻辑
 ├── app.py           # Gradio UI 入口
 ├── requirements.txt # Python 依赖
-└── .env             # API 密钥（不提交到 Git）
+└── .env             # API 密钥
 ```
