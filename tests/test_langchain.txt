@@ -1,0 +1,22 @@
+LangChain 技术文档
+
+第一章：概述
+LangChain 是一个用于开发大语言模型（LLM）应用的开源框架，由 Harrison Chase 于 2022 年创建。
+它的核心思想是将 LLM 与外部工具、数据源和记忆系统组合起来，构建复杂的 AI 应用。
+
+第二章：核心组件
+1. Chain（链）：将多个处理步骤串联形成流水线。例如先检索文档，再用 LLM 生成回答。
+2. Agent（代理）：让 LLM 自主决定调用哪些工具。Agent 会观察工具返回的结果，再决定下一步。
+3. Memory（记忆）：为对话提供上下文记忆，支持短期记忆和长期记忆。
+4. Retriever（检索器）：从向量数据库等外部源检索相关文档片段。
+
+第三章：RAG 架构
+RAG（Retrieval-Augmented Generation）是检索增强生成的缩写。
+工作流程：用户提问 → 检索相关文档 → 将文档片段与问题一起发送给 LLM → 生成回答。
+优势：减少幻觉、支持私有数据、答案可溯源。
+常用向量数据库：FAISS、Chroma、Pinecone、Weaviate。
+
+第四章：部署
+LangChain 应用可以通过 FastAPI、Gradio 或 Streamlit 快速部署为 Web 服务。
+推荐使用 LangSmith 进行调试和监控。
+生产环境建议使用 Redis 或 PostgreSQL 作为持久化记忆存储。
